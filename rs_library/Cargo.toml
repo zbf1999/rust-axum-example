@@ -8,6 +8,11 @@ edition = "2021"
 [dependencies]
 rs_system={path="../rs_system"}
 anyhow = "1.0.81"
-axum = "0.7.5"
-tokio = { version = "1.37.0", features = ["full"] }
 listenfd = "1.0.1"
+axum = {version="0.7.5", features=["ws"]}
+futures = "0.3.30"
+tokio = { version = "1.37.0", features = ["full"] }
+tower = { version = "0.4", features = ["full"] }
+tower-http = { version = "0.5.2", features = ["trace"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
